@@ -1,3 +1,4 @@
+import { SearchSectionModule } from './../search-section/search-section.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CourseListComponent } from './course-list/course-list.component';
@@ -8,7 +9,8 @@ import { CourseListItemComponent } from './course-list-item/course-list-item.com
 @NgModule({
   declarations: [CourseListComponent, CourseListItemComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    SearchSectionModule
   ],
   exports: [CourseListComponent]
 })

@@ -7,14 +7,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-import { SectionComponent } from './section/section.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BreadcrumbsComponent,
-    SectionComponent
+    BreadcrumbsComponent
   ],
   imports: [
     CoreModule,

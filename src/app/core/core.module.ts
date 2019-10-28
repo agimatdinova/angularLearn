@@ -11,6 +11,6 @@ import { LogoComponent } from './logo/logo.component';
   imports: [
     CommonModule
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent, FooterComponent]
 })
 export class CoreModule { }
