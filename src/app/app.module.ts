@@ -1,3 +1,5 @@
+import { ROUTES } from './app.routes';
+import { HomeModule } from './home/home.module';
 import { CourseListModule } from './course-list/course-list.module';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { SectionComponent } from './section/section.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import { SectionComponent } from './section/section.component';
   imports: [
     CoreModule,
     CourseListModule,
-    BrowserModule
+    HomeModule,
+    BrowserModule,
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
