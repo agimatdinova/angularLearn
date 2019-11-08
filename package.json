@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prettier": "prettier --config ./.prettierrc --list-different \"{projects/*/src,src/app}/**/*.{ts,js,css,scss,json}\"",
+    "precommit": "npm run prettier && npm run lint"
   },
   "private": true,
   "dependencies": {
@@ -22,7 +24,8 @@
     "bootstrap": "^4.3.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "rxjs-tslint-rules": "~4.25.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.12",
@@ -43,6 +46,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "angular-tslint-rules": "1.20.0",
+    "husky": "3.0.5",
+    "prettier": "~1.18.0",
+    "rxjs-tslint-rules": "~4.25.0"
   }
 }
