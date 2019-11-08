@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-section.component.css']
 })
 export class SearchSectionComponent implements OnInit {
-  courseName;
+  public searchInput='Text to search';
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  
   search(){
-    console.log("searched " + this.courseName);
+    console.log("searched " + this.searchInput);
   }
 
 }

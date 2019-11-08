@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchSectionComponent } from './search-section.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [SearchSectionComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [SearchSectionComponent]
 })

@@ -1,11 +1,11 @@
 <div class="input-group mb-3">
-  <input [(value)]="courseName" type="text"
+  <input [(ngModel)]="searchInput"
+         type="text"
          class="form-control"
-         placeholder="Text to search"
-         aria-label="Text to search"
          aria-describedby="basic-addon2">
   <div class="input-group-append">
     <button class="btn btn-outline-secondary"
-            type="button" (click)="search()">Search</button>
+            type="button"
+            (click)="search()">Search</button>
   </div>
 </div>
