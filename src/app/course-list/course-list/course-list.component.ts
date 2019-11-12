@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseListItem } from '../course-list-item.model';
+import { SearchPipe } from '../search.pipe';
 
 @Component({
   selector: 'app-course-list',
@@ -33,6 +34,8 @@ export class CourseListComponent implements OnInit {
       topRated: false
     }
   ];
+  public searchInput='Text to search';
+
   constructor() { }
 
   ngOnInit() {
@@ -40,5 +43,9 @@ export class CourseListComponent implements OnInit {
 
   loadMore(){
     console.log('Loading more courses');
+  }
+  
+  search(){
+    this.courseItems = new SearchPipe().transform(this.courseItems, this.searchInput);
   }
 }

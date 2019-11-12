@@ -1,4 +1,13 @@
-<app-search-section></app-search-section>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="searchInput"
+           class="form-control"
+           aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary"
+              type="button"
+              (click)="search()">Search</button>
+    </div>
+  </div>
 <button class="btn btn-outline-secondary"
         type="button">Add new course</button>
 
