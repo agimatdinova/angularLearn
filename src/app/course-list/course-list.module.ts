@@ -1,3 +1,4 @@
+import { DurationPipe } from './duration.pipe';
 import { FormsModule } from '@angular/forms';
 import { BorderColorDirective } from './border.color.directive';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,8 @@ import { CourseListItemComponent } from './course-list-item/course-list-item.com
   declarations: [
     CourseListComponent, 
     CourseListItemComponent,
-    BorderColorDirective
+    BorderColorDirective,
+    DurationPipe
   ],
   imports: [
     CommonModule,

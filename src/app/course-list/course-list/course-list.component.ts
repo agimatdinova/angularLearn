@@ -13,7 +13,7 @@ export class CourseListComponent implements OnInit {
       id: 1,
       title: 'Video Course 1',
       creationDate: new Date('2019-11-10'),
-      duration: '1 h 26 min',
+      duration: 125,
       description: 'Course 1 description',
       topRated: true
     },
@@ -21,7 +21,7 @@ export class CourseListComponent implements OnInit {
       id: 1,
       title: 'Video Course 2',
       creationDate: new Date('2019-11-16'),
-      duration: '1 h 26 min',
+      duration: 15,
       description: 'Course 2 description',
       topRated: false
     },
@@ -29,7 +29,7 @@ export class CourseListComponent implements OnInit {
       id: 1,
       title: 'Video Course 3',
       creationDate: new Date('2019-11-19'),
-      duration: '1 h 26 min',
+      duration: 90,
       description: 'Course 3 description',
       topRated: false
     }
