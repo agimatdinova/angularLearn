@@ -1,3 +1,4 @@
+import { BorderColorDirective } from './border.color.directive';
 import { SearchSectionModule } from './../search-section/search-section.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,7 +8,11 @@ import { CourseListItemComponent } from './course-list-item/course-list-item.com
 
 
 @NgModule({
-  declarations: [CourseListComponent, CourseListItemComponent],
+  declarations: [
+    CourseListComponent, 
+    CourseListItemComponent,
+    BorderColorDirective
+  ],
   imports: [
     CommonModule,
     SearchSectionModule

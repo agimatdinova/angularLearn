@@ -11,23 +11,26 @@ export class CourseListComponent implements OnInit {
     {
       id: 1,
       title: 'Video Course 1',
-      creationDate: '2019-10-16',
+      creationDate: new Date('2019-11-10'),
       duration: '1 h 26 min',
       description: 'Course 1 description',
+      topRated: true
     },
     {
       id: 1,
       title: 'Video Course 2',
-      creationDate: '2019-10-16',
+      creationDate: new Date('2019-11-16'),
       duration: '1 h 26 min',
       description: 'Course 2 description',
+      topRated: false
     },
     {
       id: 1,
       title: 'Video Course 3',
-      creationDate: '2019-10-16',
+      creationDate: new Date('2019-11-19'),
       duration: '1 h 26 min',
       description: 'Course 3 description',
+      topRated: false
     }
   ];
   constructor() { }

@@ -3,6 +3,7 @@
         type="button">Add new course</button>
 
 <div class="app-course-list">
+  <span *ngIf="courseItems.length == 0">No data. Feel free to add new course.</span>
   <app-course-list-item *ngFor="let item of courseItems"
                         [courseItem]="item"></app-course-list-item>
 </div>
