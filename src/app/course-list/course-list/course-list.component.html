@@ -1,8 +1,18 @@
-<app-search-section></app-search-section>
+<div class="input-group mb-3">
+    <input type="text" [(ngModel)]="searchInput"
+           class="form-control"
+           aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary"
+              type="button"
+              (click)="search()">Search</button>
+    </div>
+  </div>
 <button class="btn btn-outline-secondary"
         type="button">Add new course</button>
 
 <div class="app-course-list">
+  <span *ngIf="courseItems.length == 0">No data. Feel free to add new course.</span>
   <app-course-list-item *ngFor="let item of courseItems"
                         [courseItem]="item"></app-course-list-item>
 </div>
