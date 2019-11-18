@@ -8,14 +8,10 @@ export class BorderColorDirective {
 
     constructor(private el: ElementRef, private renderer: Renderer2) {
         let current = new Date();
-        if (this.borderColorByDate < current
-            // && diff<14 days
-            ) {
+        if (this.borderColorByDate < current) {
             this.renderer.setStyle(this.el.nativeElement, 'border-color', 'green');
-        } else {
-            if (this.borderColorByDate > current) {
+        } else if (this.borderColorByDate > current) {
                 this.renderer.setStyle(this.el.nativeElement, 'border-color', 'blue');
-            }
         }
         
     }
