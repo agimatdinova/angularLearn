@@ -1,3 +1,4 @@
+import { LoginModule } from './core/login/login.module';
 import { ROUTES } from './app.routes';
 import { HomeModule } from './home/home.module';
 import { CourseListModule } from './course-list/course-list.module';
@@ -18,6 +19,7 @@ import { FormsModule }   from '@angular/forms';
   imports: [
     CoreModule,
     CourseListModule,
+    LoginModule,
     HomeModule,
     BrowserModule,
     FormsModule,
