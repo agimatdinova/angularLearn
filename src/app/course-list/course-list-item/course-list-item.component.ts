@@ -1,3 +1,4 @@
+import { CoursesService } from './../courses.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseListItem } from '../course-list-item.model';
 
@@ -8,9 +9,12 @@ import { CourseListItem } from '../course-list-item.model';
 })
 export class CourseListItemComponent implements OnInit {
   @Input() public courseItem: CourseListItem;
-  constructor() { }
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
   }
 
+  delete(id: number) {
+    this.coursesService.removeItem(id);
+  }
 }
