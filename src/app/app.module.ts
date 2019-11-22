@@ -10,11 +10,16 @@ import { AppComponent } from './app.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatButtonModule} from '@angular/material/button';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     CoreModule,
@@ -23,7 +28,13 @@ import { FormsModule }   from '@angular/forms';
     HomeModule,
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
     RouterModule.forRoot(ROUTES)
+  ],
+  entryComponents: [
+    ConfirmationDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
