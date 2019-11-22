@@ -10,7 +10,8 @@ import { SearchPipe } from '../search.pipe';
 })
 export class CourseListComponent implements OnInit {
   public courseItems: CourseListItem[];
-  public searchInput='Text to search';
+  public searchInput='';
+  public searchInputPlaceholder='Text to search';
 
   constructor(private coursesService: CoursesService) { }
 
@@ -27,7 +28,8 @@ export class CourseListComponent implements OnInit {
   }
 
   search() {
-    this.courseItems = new SearchPipe().transform(this.courseItems, this.searchInput);
+    this.courseItems = new SearchPipe().transform(this.coursesService.getCourses(), this.searchInput);
+    this.searchInput = '';
   }
 
   createCourse() {

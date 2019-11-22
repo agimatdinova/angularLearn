@@ -5,10 +5,10 @@ import { CourseListItem } from './course-list-item.model';
     name: 'searchByTitle'
 })
 export class SearchPipe implements PipeTransform {
-    transform(allCourses: CourseListItem[], title: string): CourseListItem[] {
-        if (!allCourses || !title) {
+    transform(allCourses: CourseListItem[], input: string): CourseListItem[] {
+        if (!allCourses || !input) {
             return allCourses
         }
-        return allCourses.filter((task) => task.title.toUpperCase() === title.toUpperCase());
+        return allCourses.filter((task) => task.title.toUpperCase().includes(input.toUpperCase()));
     }
 }
