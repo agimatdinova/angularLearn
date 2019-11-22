@@ -5,19 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  private storage;
+  
   constructor() { }
   
   login(){
     console.log("Loggen in :)");
+    localStorage.setItem('isAuthenticated', 'true');
   }
 
   logout(){
     console.log("Logget out :)")
+    localStorage.setItem('isAuthenticated', 'false');
   }
 
-  isAuthenticated(){
-    return true;
+  isAuthenticated(): boolean {
+    return localStorage.getItem('isAuthenticated') === 'true';
   }
 
   getUserInfo(){
