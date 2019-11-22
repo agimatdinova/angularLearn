@@ -38,17 +38,16 @@ export class CoursesService {
     return this.courseItems;
   }
 
-  createCourse(id: number, title: string, creationDate: Date, duration: number, 
+  createCourse(title: string, creationDate: Date, duration: number, 
     description: string, topRated: boolean) {
       this.courseItems.push({ 
-        id: id,
+        id: Math.random(),
         title: title,
         creationDate: creationDate,
         duration: duration,
         description: description,
         topRated: topRated
       });
-
   }
 
   getItemById(id: number) {

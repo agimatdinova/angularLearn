@@ -17,4 +17,8 @@ export class CourseListItemComponent implements OnInit {
   delete(id: number) {
     this.coursesService.removeItem(id);
   }
+
+  editCourse(id: number) {
+    this.coursesService.updateItem(id, "Another course", new Date(), 123, "Another description", false);
+  }
 }

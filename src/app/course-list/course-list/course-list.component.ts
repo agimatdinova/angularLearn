@@ -26,7 +26,11 @@ export class CourseListComponent implements OnInit {
     this.courseItems = this.coursesService.getCourses();
   }
 
-  search(){
+  search() {
     this.courseItems = new SearchPipe().transform(this.courseItems, this.searchInput);
+  }
+
+  createCourse() {
+    this.coursesService.createCourse("Another course", new Date(), 123, "Another description", false);
   }
 }
