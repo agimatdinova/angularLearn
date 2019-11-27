@@ -1,5 +1,5 @@
 <app-header></app-header>
-<app-breadcrumbs></app-breadcrumbs>
+<app-breadcrumbs *ngIf="isAuthorized()"></app-breadcrumbs>
 <div class="container">
   <router-outlet></router-outlet>
   <!-- <app-course-list></app-course-list> -->
