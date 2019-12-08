@@ -1,13 +1,14 @@
 import { ConfirmationDialogComponent } from './../../confirmation-dialog/confirmation-dialog.component';
 import { CoursesService } from './../courses.service';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CourseListItem } from '../course-list-item.model';
 import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-course-list-item',
   templateUrl: './course-list-item.component.html',
-  styleUrls: ['./course-list-item.component.css']
+  styleUrls: ['./course-list-item.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseListItemComponent implements OnInit {
   @Input() public courseItem: CourseListItem;

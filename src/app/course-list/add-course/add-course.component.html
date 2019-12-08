@@ -1,0 +1,48 @@
+  <form>
+    <h5>Add course</h5>
+    <div class="form-group">
+      <label>Title:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Title"
+             name="title"
+             [(ngModel)]="newCourse.title">
+    </div>
+
+    <div class="form-group">
+      <label>Description:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Description"
+             name="description"
+             [(ngModel)]="newCourse.description">
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Date"
+             name="date"
+             [(ngModel)]="newCourse.creationDate">
+    </div>
+    <div class="form-group">
+      <label>Duration:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Duration"
+             name="duration"
+             [(ngModel)]="newCourse.duration"> <div class="col-2">{{newCourse.duration | durationFormat}}</div>
+    </div>
+    <div class="form-group">
+      <label>Authors:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="Authors"
+             name="authors"
+             [(ngModel)]="newCourse.authors">
+    </div>
+
+    <button type="button"
+            class="btn btn-primary">Save</button>
+    <button class="btn btn-outline-secondary">Cancel</button>
+  </form>

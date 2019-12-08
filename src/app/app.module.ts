@@ -14,12 +14,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { SearchPipe } from './course-list/search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreadcrumbsComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    SearchPipe
   ],
   imports: [
     CoreModule,
