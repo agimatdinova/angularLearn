@@ -1,3 +1,4 @@
+import { NoContentComponent } from './no-content/no-content.component';
 import { AddCourseComponent } from './course-list/add-course/add-course.component';
 import { LoginComponent } from './core/login/login.component';
 import { CourseListComponent } from './course-list/course-list/course-list.component';
@@ -9,5 +10,6 @@ export const ROUTES: Route[] = [
     { path: 'home', component: HomeComponent},
     { path: 'courses-page', component: CourseListComponent},
     { path: 'login', component: LoginComponent},
-    { path: 'add-course', component: AddCourseComponent}
+    { path: 'add-course', component: AddCourseComponent},
+    { path: '**', component: NoContentComponent}
 ];
