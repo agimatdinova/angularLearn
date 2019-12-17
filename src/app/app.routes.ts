@@ -6,10 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { Route } from "@angular/router";
 
 export const ROUTES: Route[] = [
-    { path: '', redirectTo: 'courses-page', pathMatch: 'full'},
+    { path: '', redirectTo: 'courses', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
-    { path: 'courses-page', component: CourseListComponent},
+    { path: 'courses', component: CourseListComponent},
     { path: 'login', component: LoginComponent},
-    { path: 'add-course', component: AddCourseComponent},
+    { path: 'courses/new', component: AddCourseComponent},
     { path: '**', component: NoContentComponent}
 ];
