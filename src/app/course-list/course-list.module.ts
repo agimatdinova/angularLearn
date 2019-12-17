@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { CourseListComponent } from './course-list/course-list.component';
 import { CourseListItemComponent } from './course-list-item/course-list-item.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AddCourseComponent } from './add-course/add-course.component';
     CourseListItemComponent,
     BorderColorDirective,
     DurationPipe,
-    AddCourseComponent
+    AddCourseComponent,
+    EditCourseComponent
   ],
   imports: [
     CommonModule,

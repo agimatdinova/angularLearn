@@ -14,6 +14,7 @@ export class CoursesService {
       creationDate: new Date('2019-11-10'),
       duration: 125,
       description: 'Course 1 description',
+      authors: '',
       topRated: true
     },
     {
@@ -22,6 +23,7 @@ export class CoursesService {
       creationDate: new Date('2019-11-16'),
       duration: 15,
       description: 'Course 2 description',
+      authors: '',
       topRated: false
     },
     {
@@ -30,6 +32,7 @@ export class CoursesService {
       creationDate: new Date('2019-11-19'),
       duration: 90,
       description: 'Course 3 description',
+      authors: '',
       topRated: false
     }
   ];
@@ -39,13 +42,14 @@ export class CoursesService {
   }
 
   createCourse(title: string, creationDate: Date, duration: number, 
-    description: string, topRated: boolean) {
+    description: string, authors:string, topRated: boolean) {
       this.courseItems.push({ 
         id: Math.random(),
         title: title,
         creationDate: creationDate,
         duration: duration,
         description: description,
+        authors: authors,
         topRated: topRated
       });
   }
@@ -55,7 +59,7 @@ export class CoursesService {
   }
 
   updateItem(id: number, title: string, creationDate: Date, duration: number, 
-    description: string, topRated: boolean) {
+    description: string, authors: string, topRated: boolean) {
     let index = this.courseItems.indexOf(this.getItemById(id));
     this.courseItems[index] = { 
       id: id,
@@ -63,6 +67,7 @@ export class CoursesService {
       creationDate: creationDate,
       duration: duration,
       description: description,
+      authors: authors,
       topRated: topRated
     };
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AddCourse } from './add-course.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-course',
@@ -14,7 +15,7 @@ export class AddCourseComponent implements OnInit {
     duration: 0,
     authors: ''
   };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,7 +24,7 @@ export class AddCourseComponent implements OnInit {
 
   }
 
-  cancel() {
-
+  cancel(){
+    this.router.navigateByUrl('/courses');
   }
 }

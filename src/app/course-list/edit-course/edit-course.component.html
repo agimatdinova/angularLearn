@@ -1,4 +1,4 @@
-  <form>
+<form>
     <h5>Add course</h5>
     <div class="form-group">
       <label>Title:</label>
@@ -6,7 +6,7 @@
              class="form-control"
              placeholder="Title"
              name="title"
-             [(ngModel)]="newCourse.title">
+             [(ngModel)]="courseItem.title">
     </div>
 
     <div class="form-group">
@@ -15,7 +15,7 @@
              class="form-control"
              placeholder="Description"
              name="description"
-             [(ngModel)]="newCourse.description">
+             [(ngModel)]="courseItem.description">
     </div>
     <div class="form-group">
       <label>Date:</label>
@@ -23,7 +23,7 @@
              class="form-control"
              placeholder="Date"
              name="date"
-             [(ngModel)]="newCourse.creationDate">
+             [(ngModel)]="courseItem.creationDate">
     </div>
     <div class="form-group">
       <label>Duration:</label>
@@ -31,7 +31,7 @@
              class="form-control"
              placeholder="Duration"
              name="duration"
-             [(ngModel)]="newCourse.duration"> <div class="col-2">{{newCourse.duration | durationFormat}}</div>
+             [(ngModel)]="courseItem.duration"> <div class="col-2">{{courseItem.duration | durationFormat}}</div>
     </div>
     <div class="form-group">
       <label>Authors:</label>
@@ -39,7 +39,7 @@
              class="form-control"
              placeholder="Authors"
              name="authors"
-             [(ngModel)]="newCourse.authors">
+             [(ngModel)]="courseItem.authors">
     </div>
 
     <button type="button"

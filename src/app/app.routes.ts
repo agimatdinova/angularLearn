@@ -1,3 +1,4 @@
+import { EditCourseComponent } from './course-list/edit-course/edit-course.component';
 import { NoContentComponent } from './no-content/no-content.component';
 import { AddCourseComponent } from './course-list/add-course/add-course.component';
 import { LoginComponent } from './core/login/login.component';
@@ -11,5 +12,6 @@ export const ROUTES: Route[] = [
     { path: 'courses', component: CourseListComponent},
     { path: 'login', component: LoginComponent},
     { path: 'courses/new', component: AddCourseComponent},
+    { path: 'courses/:id', component: EditCourseComponent},
     { path: '**', component: NoContentComponent}
 ];
