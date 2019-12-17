@@ -1,3 +1,4 @@
+import { RouterModule, Router } from '@angular/router';
 import { CoursesService } from './../courses.service';
 import { Component, OnInit } from '@angular/core';
 import { CourseListItem } from '../course-list-item.model';
@@ -13,7 +14,8 @@ export class CourseListComponent implements OnInit {
   public searchInput='';
   public searchInputPlaceholder='Text to search';
 
-  constructor(private coursesService: CoursesService) { }
+  constructor(private coursesService: CoursesService, 
+    private router: Router) { }
 
   ngOnInit() {
     this.getCourses();
@@ -32,7 +34,7 @@ export class CourseListComponent implements OnInit {
     this.searchInput = '';
   }
 
-  createCourse() {
-    this.coursesService.createCourse("Another course", new Date(), 123, "Another description", false);
+  addCourse() {
+    this.router.navigateByUrl('/courses/new');
   }
 }

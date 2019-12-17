@@ -3,6 +3,7 @@ import { CoursesService } from './../courses.service';
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CourseListItem } from '../course-list-item.model';
 import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list-item',
@@ -13,13 +14,14 @@ import { MatDialog } from '@angular/material';
 export class CourseListItemComponent implements OnInit {
   @Input() public courseItem: CourseListItem;
   constructor(private coursesService: CoursesService, 
-    public dialog: MatDialog) { }
+    public dialog: MatDialog,
+    private router: Router) { }
 
   ngOnInit() {
   }
 
   editCourse(id: number) {
-    this.coursesService.updateItem(id, "Another course", new Date(), 123, "Another description", false);
+    this.router.navigateByUrl('/courses/' + id);
   }
 
   openDialog(id: number): void {
