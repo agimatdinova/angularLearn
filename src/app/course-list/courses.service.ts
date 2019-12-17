@@ -44,7 +44,7 @@ export class CoursesService {
   createCourse(title: string, creationDate: Date, duration: number, 
     description: string, authors:string, topRated: boolean) {
       this.courseItems.push({ 
-        id: Math.random(),
+        id: Math.floor((Math.random()*6)+1),
         title: title,
         creationDate: creationDate,
         duration: duration,

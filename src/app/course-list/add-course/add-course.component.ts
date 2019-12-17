@@ -1,3 +1,4 @@
+import { CoursesService } from './../courses.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { AddCourse } from './add-course.model';
 import { Router } from '@angular/router';
@@ -15,13 +16,15 @@ export class AddCourseComponent implements OnInit {
     duration: 0,
     authors: ''
   };
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private coursesService: CoursesService) { }
 
   ngOnInit() {
   }
 
   save() {
-
+    this.coursesService.createCourse(this.newCourse.title, this.newCourse.creationDate, this.newCourse.duration, this.newCourse.description, this.newCourse.authors, false);
+    this.router.navigateByUrl('/courses');
   }
 
   cancel(){
