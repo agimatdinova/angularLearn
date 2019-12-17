@@ -58,18 +58,9 @@ export class CoursesService {
     return this.courseItems.find(item => item.id === id);
   }
 
-  updateItem(id: number, title: string, creationDate: Date, duration: number, 
-    description: string, authors: string, topRated: boolean) {
+  updateItem(id: number, updatedItem: CourseListItem) {
     let index = this.courseItems.indexOf(this.getItemById(id));
-    this.courseItems[index] = { 
-      id: id,
-      title: title,
-      creationDate: creationDate,
-      duration: duration,
-      description: description,
-      authors: authors,
-      topRated: topRated
-    };
+    this.courseItems[index] = updatedItem;
   }
 
   removeItem(id: number) {
